@@ -1,0 +1,141 @@
+:root {
+    /* 
+    */
+    --secondary-1: rgb(2, 88, 2);
+    --secondary-2: rgba(173, 216, 230, 0.781);
+    --secondary-3: rgb(71, 55, 9);
+    --secondary-4: white;
+    --secondary-5: rgba(71, 55, 9, 0.507);
+}
+
+body {
+    margin: 0;
+    background-image: url("images/591.jpg");
+    background-position: repeat;
+    font-size: large;
+}
+h1 {
+    font-size: 45px;
+    margin: 0;
+}
+
+#head {
+    height: 100px;
+    background-color: var(--secondary-2);
+    padding: 0 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+}
+.topnav {
+    overflow: hidden;
+    background-color: var(--secondary-2);
+    border-top: 1px ridge var(--secondary-1);
+    border-bottom: 1px ridge var(--secondary-1);
+}
+.topnav a.active {
+    background-color: var(--secondary-3);
+    color: var(--secondary-4);
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.topnav a:hover {
+    background-color: var(--secondary-5);
+}
+.topnav button[type="submit"] {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+.topnav input[type="text"] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    float: right;
+}
+
+.content {
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: var(--secondary-2);
+    border: 1px ridge var(--secondary-1);
+    padding: 0 2%;
+}
+.content h2 {
+    text-align: center;
+}
+.content h3 {
+    padding-left: 2%;
+}
+.needs {
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px ridge var(--secondary-1);
+    padding: 0 2%;
+}
+.more-info {
+    text-align: right;
+    padding-bottom: 16px;
+}
+.more-info a {
+    padding: 14px 16px;
+    background-color: var(--secondary-3);
+    color: var(--secondary-4);
+    text-decoration: none;
+}
+.more-info a:hover {
+    background-color: var(--secondary-5);
+}
+.map {
+    padding: 0;
+}
+.map-head {
+    border: 1px ridge var(--secondary-1);
+    overflow: hidden;
+}
+.map-option {
+    float: left;
+    padding: 14px 16px;
+}
+.check-text {
+    display: inline;
+    padding-left: 5px;
+}
+.island-map {
+    border: 1px ridge var(--secondary-1);
+}
+.to-taniti {
+    text-align: center;
+}
+.to-taniti button[type="submit"] {
+    background-color: var(--secondary-3);
+    color: var(--secondary-4);
+    padding: 14px 16px;
+    text-decoration: none;
+    border: none;
+}
+
+input[type="checkbox"] {
+    -ms-transform: scale(2);
+    -moz-transform: scale(2,2);
+    -webkit-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+    padding: 10px;
+}
