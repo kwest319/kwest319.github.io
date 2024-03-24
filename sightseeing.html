@@ -3,6 +3,7 @@
     <head>
         <title>Taniti - Sightseeing</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="taniti.js"></script>
     </head>
     <body>
         <div id="head">
@@ -17,8 +18,8 @@
             <a class="active" href="sightseeing.html">Sightseeing</a>
             <a href="transportation.html">Transportation</a>
             <div class="search">
-                <button type="submit">Go</button>
-                <input type="text" placeholder="search">
+                <button type="submit" onclick="searchTaniti()">Go</button>
+                <input id="searchTaniti" type="text" placeholder="search">
             </div>
         </div>
         <div class="content">
@@ -32,7 +33,7 @@
                 <h3>Find a location</h3>
             </div>
             <div class="island-map">
-                <img src="images/taniti-map.svg" alt="taniti island map">
+                <img onclick="mapInteract()" src="images/taniti-map.svg" alt="island map">
             </div>
         </div>
     </body>

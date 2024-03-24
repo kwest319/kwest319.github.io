@@ -27,6 +27,9 @@ h1 {
     flex-direction: row;
     align-items: center;
 }
+#island-map {
+    border: 1px ridge var(--secondary-1);
+}
 
 .logo {
     height: 100px;
@@ -116,9 +119,6 @@ h1 {
 .check-text {
     display: inline;
     padding-left: 5px;
-}
-.island-map {
-    border: 1px ridge var(--secondary-1);
 }
 .to-taniti {
     text-align: center;
