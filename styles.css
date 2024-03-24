@@ -6,6 +6,10 @@
     --secondary-3: rgb(71, 55, 9);
     --secondary-4: white;
     --secondary-5: rgba(71, 55, 9, 0.507);
+
+    --head-height: 130px;
+    --border-all: 1px ridge var(--secondary-1);
+    --search-text-size: 17px;
 }
 
 body {
@@ -20,7 +24,7 @@ h1 {
 }
 
 #head {
-    height: 100px;
+    height: var(--head-height);
     background-color: var(--secondary-2);
     padding: 0 8px;
     display: flex;
@@ -28,17 +32,17 @@ h1 {
     align-items: center;
 }
 #island-map {
-    border: 1px ridge var(--secondary-1);
+    border: var(--border-all);
 }
 
 .logo {
-    height: 100px;
+    height: var(--head-height);
 }
 .topnav {
     overflow: hidden;
     background-color: var(--secondary-2);
-    border-top: 1px ridge var(--secondary-1);
-    border-bottom: 1px ridge var(--secondary-1);
+    border-top: var(--border-all);
+    border-bottom: var(--border-all);
 }
 .topnav a.active {
     background-color: var(--secondary-3);
@@ -56,28 +60,33 @@ h1 {
     background-color: var(--secondary-5);
 }
 .topnav button[type="submit"] {
-    float: right;
     padding: 6px;
     margin-top: 8px;
     margin-right: 16px;
     background: #ddd;
-    font-size: 17px;
+    font-size: var(--search-text-size);
     border: none;
     cursor: pointer;
 }
 .topnav input[type="text"] {
     padding: 6px;
     margin-top: 8px;
-    font-size: 17px;
+    font-size: var(--search-text-size);
     border: none;
+}
+.search {
     float: right;
+}
+.search.wrapper {
+    overflow: hidden;
+    display: inline-block;
 }
 
 .content {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 7%;
+    margin-right: 7%;
     background-color: var(--secondary-2);
-    border: 1px ridge var(--secondary-1);
+    border: var(--border-all);
     padding: 0 2%;
 }
 .content h2 {
@@ -87,9 +96,7 @@ h1 {
     padding-left: 2%;
 }
 .needs {
-    margin-left: 5%;
-    margin-right: 5%;
-    border: 1px ridge var(--secondary-1);
+    border: var(--border-all);
     padding: 0 2%;
 }
 .more-info {
@@ -109,12 +116,15 @@ h1 {
     padding: 0;
 }
 .map-head {
-    border: 1px ridge var(--secondary-1);
+    border: var(--border-all);
     overflow: hidden;
 }
 .map-option {
     float: left;
     padding: 14px 16px;
+}
+.map-option.wrapper {
+    display: inline-block;
 }
 .check-text {
     display: inline;
@@ -138,4 +148,73 @@ input[type="checkbox"] {
     -o-transform: scale(2);
     transform: scale(2);
     padding: 10px;
+}
+
+@media screen and (max-width: 980px) {
+    :root {
+        --head-height: 200px;
+        --border-all: 3px ridge var(--secondary-1);
+        --search-text-size: 60px;
+    }
+    body {
+        font-size: 60px;
+    }
+    h1 {
+        font-size: 90px;
+        margin: 0;
+    }
+
+
+    .topnav {
+        /*overflow: hidden;
+        background-color: var(--secondary-2);
+        border-top: var(--border-all);
+        border-bottom: var(--border-all);*/
+        text-align: center;
+    }    
+    .topnav button[type="submit"] {
+        padding: 6px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #ddd;
+        font-size: var(--search-text-size);
+        border: none;
+        cursor: pointer;
+    }
+    .topnav input[type="text"] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: var(--search-text-size);
+        border: none;
+    }
+    .search {
+        float: none;
+    }
+    .search.wrapper {
+        overflow: hidden;
+        display: inline-block;
+    }    
+    .more-info {
+        text-align: center;
+        padding-bottom: 16px;
+    }
+    
+    .to-taniti button[type="submit"] {
+        background-color: var(--secondary-3);
+        color: var(--secondary-4);
+        padding: 14px 16px;
+        text-decoration: none;
+        border: none;
+        font-size: 100%;
+        margin: 10px;
+    }
+    
+    input[type="checkbox"] {
+        -ms-transform: scale(4);
+        -moz-transform: scale(4,4);
+        -webkit-transform: scale(4);
+        -o-transform: scale(4);
+        transform: scale(4);
+        padding: 10px;
+    }
 }
