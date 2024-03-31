@@ -11,3 +11,7 @@ function mapInteract() {
     });
     alert("user searched for" + searched);
 }
+
+function bookNow(transportType) {
+    alert("You " + transportType + " has been booked! Enjoy the island!");
+}
